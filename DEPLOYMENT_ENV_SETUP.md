@@ -2,6 +2,13 @@
 
 This guide helps you set up environment variables for deployment on Render/Vercel.
 
+## 📌 Important: Separate Frontend/Backend Deployment
+
+This project uses **separate frontend and backend** for easier deployment:
+- **Backend** can be deployed to any Node.js hosting (Render, Heroku, etc.)
+- **Frontend** can be deployed to static hosting (Vercel, Netlify, Render Static, etc.)
+- No need for `concurrently` - they run independently
+
 ## 📋 Quick Setup
 
 ### 1. Backend Environment Variables
@@ -52,18 +59,26 @@ VITE_NODE_ENV=production
 ### Render.com Setup
 
 #### Backend (Node.js Service)
-1. Go to your Render service dashboard
-2. Navigate to "Environment" tab
-3. Add these variables:
+1. Create new **Web Service** in Render
+2. Connect your GitHub repository
+3. **Important Settings:**
+   - **Root Directory:** `backend`
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start`
+4. Go to "Environment" tab and add:
    - `JWT_SECRET` - Generate a strong secret (use: `openssl rand -base64 32`)
    - `PORT` - Usually auto-set, but you can specify `3001`
    - `CORS_ORIGIN` - Your frontend URL (e.g., `https://yourapp.onrender.com`)
    - `NODE_ENV` - Set to `production`
 
 #### Frontend (Static Site)
-1. Go to your Render static site dashboard
-2. Navigate to "Environment" tab
-3. Add these variables:
+1. Create new **Static Site** in Render
+2. Connect your GitHub repository
+3. **Important Settings:**
+   - **Root Directory:** `frontend`
+   - **Build Command:** `npm install && npm run build`
+   - **Publish Directory:** `dist`
+4. Go to "Environment" tab and add:
    - `VITE_API_URL` - Your backend URL (e.g., `https://yourapp-api.onrender.com`)
    - `VITE_APP_NAME` - Your app name
    - `VITE_NODE_ENV` - Set to `production`

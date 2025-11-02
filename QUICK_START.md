@@ -12,8 +12,19 @@ npm run install-all
 # npm install
 # cd backend && npm install && cd ..
 # cd frontend && npm install && cd ..
+```
 
-# Start both servers
+**Start the Application (IMPORTANT: Use 2 separate terminals!):**
+
+**Terminal 1 - Backend:**
+```bash
+cd backend
+npm run dev
+```
+
+**Terminal 2 - Frontend:**
+```bash
+cd frontend
 npm run dev
 ```
 

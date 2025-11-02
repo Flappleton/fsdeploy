@@ -29,20 +29,32 @@ npm run install-all
 
 ### 2. Start the Application
 
-**Option 1: Start both servers together**
+**IMPORTANT: Run frontend and backend in separate terminals!**
+
+**Terminal 1 - Start Backend:**
 ```bash
+cd backend
 npm run dev
+# Backend runs on http://localhost:3001
 ```
 
-**Option 2: Start separately**
+**Terminal 2 - Start Frontend:**
 ```bash
-# Terminal 1 - Backend
-npm run server
-# Server runs on http://localhost:3001
+cd frontend
+npm run dev
+# Frontend runs on http://localhost:3000
+```
 
-# Terminal 2 - Frontend
-npm run client
-# App runs on http://localhost:3000
+**For Production/Deployment:**
+```bash
+# Backend
+cd backend
+npm start
+
+# Frontend (after build)
+cd frontend
+npm run build
+npm run preview
 ```
 
 ### 3. Access the Application

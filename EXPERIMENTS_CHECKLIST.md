@@ -185,21 +185,32 @@ Use this checklist to verify all experiments are covered during your exam.
 **Features:**
 - ✅ GitHub Actions workflow
 - ✅ Automated build on push
+- ✅ Separate frontend and backend builds
 - ✅ Ready for Render/Vercel deployment
+
+**Important:** Frontend and backend are deployed separately (no concurrently needed)
 
 **How to demonstrate:**
 - Show workflow file
-- Explain deployment process
-- Show build commands
+- Explain separate deployment process
+- Show build commands for frontend and backend
 - Mention Render/Vercel configuration steps
+- Explain why separate deployment is better
 
 **Deployment Steps:**
 1. Push code to GitHub
-2. GitHub Actions runs automatically
-3. Build frontend
-4. Deploy to hosting service
+2. GitHub Actions runs automatically (or manual trigger)
+3. Build frontend separately
+4. Build backend separately
+5. Deploy each to hosting service
+
+**Deployment Configuration:**
+- **Backend:** Root directory `backend`, start command `npm start`
+- **Frontend:** Root directory `frontend`, build command `npm run build`, publish `dist`
 
 **Alternative:** Show deployment to Vercel/Render live (if deployed)
+
+**See:** `DEPLOYMENT_GUIDE.md` for complete deployment instructions
 
 ---
 
