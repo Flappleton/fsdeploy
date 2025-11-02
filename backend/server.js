@@ -33,6 +33,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.use(express.json());
 
 // ============================================
 // MOCK DATABASE - Replace with your topic's data structure
@@ -149,6 +150,7 @@ app.post('/api/auth/register', async (req, res) => {
       user: { id: newUser.id, username: newUser.username, email: newUser.email, role: newUser.role }
     });
   } catch (error) {
+    console.error('REGISTRATION FAILED:', error); // Add this line
     res.status(500).json({ error: 'Server error during registration' });
   }
 });
@@ -185,6 +187,7 @@ app.post('/api/auth/login', async (req, res) => {
       user: { id: user.id, username: user.username, email: user.email, role: user.role }
     });
   } catch (error) {
+    console.error('REGISTRATION FAILED:', error); // Add this line
     res.status(500).json({ error: 'Server error during login' });
   }
 });
