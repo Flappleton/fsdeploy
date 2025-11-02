@@ -30,8 +30,8 @@ npm run dev
 
 **PowerShell Issue?** Use manual installation method, or run in Command Prompt instead.
 
-- Frontend: http://localhost:3000
-- Backend: http://localhost:3001
+- Frontend: https://fsdeploy-khaki.vercel.app/
+- Backend: https://fsd-backend-gymv.onrender.com
 
 **Test Login:**
 - Admin: `admin@example.com` / `admin123`

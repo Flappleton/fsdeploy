@@ -10,7 +10,7 @@ import axios from 'axios'
 // Create axios instance
 // TO CUSTOMIZE: Update VITE_API_URL in .env file for production
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : 'http://localhost:3001/api', // Backend API URL
+  baseURL: import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : 'https://fsd-backend-gymv.onrender.com/api', // Backend API URL
   headers: {
     'Content-Type': 'application/json'
   }

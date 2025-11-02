@@ -28,7 +28,7 @@ const PORT = process.env.PORT || 3001; // Backend runs on port 3001 (or from .en
 // CORS configuration - Allow frontend to connect
 // TO CUSTOMIZE: Update CORS_ORIGIN in .env for production
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  origin: process.env.CORS_ORIGIN || 'https://fsdeploy-khaki.vercel.app/',
   credentials: true
 })); 
 app.use(express.json()); // Parses JSON requests

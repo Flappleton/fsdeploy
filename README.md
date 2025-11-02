@@ -66,21 +66,21 @@ cd frontend && npm install && cd ..
 cd backend
 npm run dev
 ```
-Backend runs on http://localhost:3001
+Backend runs on https://fsd-backend-gymv.onrender.com
 
 **Terminal 2 - Start Frontend:**
 ```bash
 cd frontend
 npm run dev
 ```
-Frontend runs on http://localhost:3000
+Frontend runs on https://fsdeploy-khaki.vercel.app/
 
 **Why separate terminals?** This allows independent deployment and avoids dependency on `concurrently`.
 
 ### 3. Access the Application
 
-- **Frontend:** Open http://localhost:3000 in your browser
-- **Backend API:** http://localhost:3001
+- **Frontend:** Open https://fsdeploy-khaki.vercel.app/ in your browser
+- **Backend API:** https://fsd-backend-gymv.onrender.com
 
 ### 4. Test Login
 

@@ -9,7 +9,7 @@ export default defineConfig({
     proxy: {
       // Proxy API requests to backend
       '/api': {
-        target: 'http://localhost:3001',
+        target: 'https://fsd-backend-gymv.onrender.com',
         changeOrigin: true
       }
     }

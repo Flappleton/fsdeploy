@@ -72,14 +72,14 @@ cd ..
 npm run dev
 
 # OR start separately:
-npm run server  # Backend on http://localhost:3001
-npm run client  # Frontend on http://localhost:3000
+npm run server  # Backend on https://fsd-backend-gymv.onrender.com
+npm run client  # Frontend on https://fsdeploy-khaki.vercel.app/
 ```
 
 ### 3. Access the Application
 
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:3001
+- **Frontend**: https://fsdeploy-khaki.vercel.app/
+- **Backend API**: https://fsd-backend-gymv.onrender.com
 
 ### 4. Default Test Credentials
 
@@ -156,7 +156,7 @@ You can also use Postman - import `POSTMAN_COLLECTION.json` if needed.
 
 #### 1. Register User
 - **Method**: POST
-- **URL**: `http://localhost:3001/api/auth/register`
+- **URL**: `https://fsd-backend-gymv.onrender.com/api/auth/register`
 - **Body** (JSON):
 ```json
 {
@@ -168,7 +168,7 @@ You can also use Postman - import `POSTMAN_COLLECTION.json` if needed.
 
 #### 2. Login
 - **Method**: POST
-- **URL**: `http://localhost:3001/api/auth/login`
+- **URL**: `https://fsd-backend-gymv.onrender.com/api/auth/login`
 - **Body** (JSON):
 ```json
 {
